@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8" /> 
+<title>微信背景图片查看小工具</title> 
+<style> 
+.divcss5 img{
+	width:224px;
+	_width:expression(this.width > 224 ? "224px" : this.width);
+} 
+</style>
+<script type="text/javascript" language="javascript">
+
+window.onload = function() {
+
+	var sq = {};
+	sq.e = document.getElementById("squirrel");
+	if (sq.e.naturalWidth) {
+		sq.nw = sq.e.naturalWidth;
+	}
+	else {
+		var i = new Image();
+		i.src = sq.e.src;
+		sq.nw = i.width;
+	}
+	sq.zoom = 30;
+	
+	if (sq.e.addEventListener) {
+		sq.e.addEventListener("mousewheel", MouseWheelHandler, false);
+		sq.e.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+	}
+	else sq.e.attachEvent("onmousewheel", MouseWheelHandler);
+	
+	function MouseWheelHandler(e) {
+
+		// cross-browser wheel delta
+		var e = window.event || e;
+		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+		sq.e.style.width = Math.max(sq.zoom, Math.min(sq.nw, sq.e.width + (sq.zoom * delta))) + "px";
+
+		return false;
+	}
+
+} 
+</script>
+</head>
+<body style="-webkit-app-region: drag">
+	<div class="divcss5"> 
+	<img id="squirrel" src="wechat_show.png" alt="Big Boat">
+	</div>
+</body>
+</html>

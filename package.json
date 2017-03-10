@@ -1,0 +1,21 @@
+{
+  "name": "WechatBG",
+  "version": "1.0.0",
+  "description": "WeChat background image for small tools",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+	"packager": "electron-packager ./ Wechat_BG --win --out ./OutApp --electron-version 1.6.2 --overwrite --icon=./icon.ico"
+  },
+  "repository": "https://github.com/silent-dxx/WechatBG",
+  "keywords": [
+    "Electron",
+    "WechatBG",
+    "windows"
+  ],
+  "author": "Silent_DXX",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^1.6.2"
+  }
+}

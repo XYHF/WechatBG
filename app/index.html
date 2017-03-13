@@ -1,13 +1,23 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-<meta charset="utf-8" /> 
+<meta charset="utf-8" />
 <title>微信背景图片查看小工具</title> 
-<style> 
+<style>
+.divcss4 {
+	height:20px;
+	width:224px;
+	background-color:#515151;
+}
+.divcss4 p{
+	text-align:center;
+	color:#FFF;
+	font-family:verdana;
+}
 .divcss5 img{
 	width:224px;
 	_width:expression(this.width > 224 ? "224px" : this.width);
-} 
+}
 </style>
 <script type="text/javascript" language="javascript">
 
@@ -44,7 +54,10 @@ window.onload = function() {
 } 
 </script>
 </head>
-<body style="-webkit-app-region: drag">
+<body>
+	<div class="divcss4" style="-webkit-app-region: drag">
+		<p> Move Or Close </p>
+	</div>
 	<div class="divcss5"> 
 	<img id="squirrel" src="wechat_show.png" alt="Big Boat">
 	</div>

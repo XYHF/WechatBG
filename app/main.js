@@ -5,9 +5,7 @@ const BrowserWindow = electron.BrowserWindow
 let mainWindow
 
 function createWindow () {
-  //mainWindow = new BrowserWindow({width: 800, height: 600})
-  mainWindow = new BrowserWindow({ transparent: true, frame: false })
-  //mainWindow = new BrowserWindow({frame: false, fullscreen: true})
+  mainWindow = new BrowserWindow({ transparent: true, frame: false, fullscreen: true})
 
   mainWindow.on('close', function () { win = null })
 

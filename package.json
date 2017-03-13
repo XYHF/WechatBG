@@ -2,7 +2,7 @@
   "name": "WechatBG",
   "version": "1.0.0",
   "description": "WeChat background image for small tools",
-  "main": "main.js",
+  "main": "app/main.js",
   "scripts": {
     "start": "electron .",
 	"packager": "electron-packager ./ Wechat_BG --win --out ./OutApp --electron-version 1.6.2 --overwrite --icon=./icon.ico"

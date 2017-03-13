@@ -16,3 +16,14 @@ npm start
 ## 功能
 1. 在`Move Or Close`栏目上可以移动位置或者鼠标右键菜单中关闭应用
 2. 在微信聊天面板中滚动可以缩放面板的大小
+
+## 打包
+> 打包[64位]
+```shell
+npm run build:win64
+```
+
+> 打包[32位]
+```shell
+npm run build:win32
+```
